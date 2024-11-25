@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fbroadcast/fbroadcast.dart';
+import 'package:test_bnetfit/features/download/download_screen.dart';
 import 'package:test_bnetfit/features/homscreen/homescreen.dart';
+import 'package:test_bnetfit/features/profile/profile_screen.dart';
 import 'package:test_bnetfit/utils/colors.dart';
 
 class MainTabView extends StatefulWidget {
@@ -39,8 +41,8 @@ class _MainTabViewState extends State<MainTabView>
       body: TabBarView(controller: controller, children: const [
         Homescreen(),
         // SearchView(),
-        // DownloadView(),
-        // ProfileView(),
+        DownloadScreen(),
+        ProfileScreen(),
       ]),
       backgroundColor: AppColors.bg,
       floatingActionButton: FloatingActionButton(
@@ -98,16 +100,16 @@ class _MainTabViewState extends State<MainTabView>
                         selectTab == 0 ? AppColors.primary2 : AppColors.subtext,
                   ),
                 ),
-                Tab(
-                  text: "SEARCH",
-                  icon: Image.asset(
-                    "assets/images/tab_search-2.png",
-                    width: 30,
-                    height: 30,
-                    color:
-                        selectTab == 1 ? AppColors.primary2 : AppColors.subtext,
-                  ),
-                ),
+                // Tab(
+                //   text: "SEARCH",
+                //   icon: Image.asset(
+                //     "assets/images/tab_search-2.png",
+                //     width: 30,
+                //     height: 30,
+                //     color:
+                //         selectTab == 1 ? AppColors.primary2 : AppColors.subtext,
+                //   ),
+                // ),
                 Tab(
                   text: "DOWNLOAD",
                   icon: Image.asset(
@@ -115,7 +117,7 @@ class _MainTabViewState extends State<MainTabView>
                     width: 30,
                     height: 30,
                     color:
-                        selectTab == 2 ? AppColors.primary2 : AppColors.subtext,
+                        selectTab == 1 ? AppColors.primary2 : AppColors.subtext,
                   ),
                 ),
                 Tab(
@@ -125,7 +127,7 @@ class _MainTabViewState extends State<MainTabView>
                     width: 30,
                     height: 30,
                     color:
-                        selectTab == 3 ? AppColors.primary2 : AppColors.subtext,
+                        selectTab == 2 ? AppColors.primary2 : AppColors.subtext,
                   ),
                 ),
               ]),
